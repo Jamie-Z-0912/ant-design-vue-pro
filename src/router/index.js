@@ -11,6 +11,29 @@ const routes = [
     component: Home
   },
   {
+    path: "/user",
+    component: () =>
+      import(/* webpackChunkName: "layout" */ "../layout/UserLayout"), // { render: h => h("router-view") },
+    children: [
+      {
+        path: "/user",
+        redirect: "/user/login"
+      },
+      {
+        path: "/user/login",
+        name: "login",
+        component: () =>
+          import(/* webpackChunkName: "user" */ "../views/User/Login")
+      },
+      {
+        path: "/user/register",
+        name: "register",
+        component: () =>
+          import(/* webpackChunkName: "user" */ "../views/User/Register")
+      }
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     // route level code-splitting
