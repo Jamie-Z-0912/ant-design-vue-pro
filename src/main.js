@@ -1,18 +1,27 @@
-/* eslint-disable prettier/prettier */
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import { Button } from "ant-design-vue";
-// import Button from "ant-design-vue/lib/button";
-// import "ant-design-vue/lib/button/style";
+// with polyfills
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
-Vue.config.productionTip = false;
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router/index.bak';
+import store from './store';
+import { VueAxios } from './utils/request';
 
-Vue.use(Button);
+// mock
+// WARNING: `mockjs` NOT SUPPORT `IE` PLEASE DO NOT USE IN `production` ENV.
+import './mock';
+
+import './core/lazy_use';
+import './permission'; // permission control
+import './utils/filter'; // global filter
+import './global.less';
+
+// mount axios to `Vue.$http` and `this.$http`
+Vue.use(VueAxios);
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount("#app");
+}).$mount('#app');

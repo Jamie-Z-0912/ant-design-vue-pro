@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>用户信息</div>
+    <div style="padding:20px;text-align:center">UserLayout</div>
     <router-view></router-view>
   </div>
 </template>

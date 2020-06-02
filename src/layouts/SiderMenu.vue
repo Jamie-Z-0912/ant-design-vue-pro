@@ -1,9 +1,9 @@
 <template>
-  <div>header</div>
+  <div>siderMenu</div>
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style></style>

@@ -1,16 +1,11 @@
 <template>
-  <div id="app">
-    <a-button>按钮</a-button>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <a-config-provider>
+    <div id="app">
+      <router-view />
     </div>
-    <router-view />
-  </div>
+  </a-config-provider>
 </template>
 
 <script>
 export default {};
 </script>
-
-<style lang="less"></style>
