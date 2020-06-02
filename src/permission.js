@@ -1,4 +1,4 @@
-import router from './router/index.bak';
+import router from './router/index';
 import store from './store';
 import storage from 'store';
 import NProgress from 'nprogress'; // progress bar
@@ -11,7 +11,7 @@ NProgress.configure({ showSpinner: false }); // NProgress Configuration
 
 const whiteList = ['login', 'register', 'registerResult']; // no redirect whitelist
 const loginRoutePath = '/user/login';
-const defaultRoutePath = '/dashboard/workplace';
+const defaultRoutePath = '/dashboard/workplace'; // 默认路由到项目概览
 
 router.beforeEach((to, from, next) => {
   NProgress.start(); // start progress bar

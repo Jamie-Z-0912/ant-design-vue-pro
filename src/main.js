@@ -4,7 +4,7 @@ import 'regenerator-runtime/runtime';
 
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router/index.bak';
+import router from './router/index';
 import store from './store';
 import { VueAxios } from './utils/request';
 
